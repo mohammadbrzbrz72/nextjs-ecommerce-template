@@ -1,19 +1,26 @@
-"use client";
-
 import React from "react";
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./header";
+import Footer from "./footer";
 
-export default function MainLayout({
-  children,
-}: {
+interface IMainLayout {
   children: React.ReactNode;
-}) {
+}
+
+const styles = {
+  root: `
+    h-screen w-screen
+  `,
+  main: `
+    overflow-x-hidden
+  `,
+};
+
+export default function MainLayout({ children }: IMainLayout) {
   return (
-    <div className="">
+    <div className={styles.root}>
       <Header />
-      <div>{children}</div>
+      <div className={styles.main}>{children}</div>
       <Footer />
     </div>
   );

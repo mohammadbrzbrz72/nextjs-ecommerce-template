@@ -13,10 +13,30 @@
 }
 
 body {
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1400px; /* 1281px + 40px padding = the main layout look 1281px width */
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

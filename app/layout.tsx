@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import MUIProvider from "@/themes/mui.provider";
 import ReactQueryProvider from "@/services/queries/react-query/rq.provider";
 import ReduxProvider from "@/store/provider";
+import Layout from "@/layouts";
 import "../styles/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    //? for rtl languages
+    // <html lang="fa" dir="rtl">
     <html lang="en">
       <body className={inter.className}>
         <ReactQueryProvider>
           <ReduxProvider>
-            <MUIProvider>{children}</MUIProvider>
+            <MUIProvider>
+              <Layout>{children}</Layout>
+            </MUIProvider>
           </ReduxProvider>
         </ReactQueryProvider>
       </body>

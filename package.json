@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.7",
     "@reduxjs/toolkit": "^1.9.5",
@@ -21,6 +22,7 @@
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "clsx": "^1.2.1",
+    "embla-carousel-react": "^8.0.0-rc11",
     "install": "^0.13.0",
     "next": "13.4.8",
     "npm": "^9.7.2",
@@ -29,7 +31,13 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.1",
     "react-redux": "^8.1.1",
+    "stylis": "^4.3.0",
+    "stylis-plugin-rtl": "^2.1.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
+    "@types/stylis": "^4.2.0"
   }
 }
